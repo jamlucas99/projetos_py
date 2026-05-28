@@ -10,43 +10,6 @@ Objetivo:
 - Quando um PDF é jogado na pasta do convênio, o sistema verifica o tamanho.
 - Se o PDF estiver acima do limite, ele divide automaticamente em partes menores.
 
-Exemplo:
-- Convênio: Unimed
-- Limite: 10 MB
-- PDF recebido: 20 MB
-- Resultado: PDF dividido em partes que respeitam o limite de 10 MB.
-
-Dependências:
-    pip install watchdog pypdf
-
-Estrutura criada automaticamente em:
-    ~/Documents/DivisorPDFHospitalar/
-    ├── entrada/
-    │   ├── Unimed/
-    │   ├── Bradesco/
-    │   └── Hapvida/
-    ├── processados/
-    ├── divididos/
-    └── logs/
-
-Regras dos convênios ficam dentro do código em REGRAS_CONVENIOS_MB.
-
-Exemplo:
-REGRAS_CONVENIOS_MB = {
-    "Unimed": 10,
-    "Bradesco": 15,
-    "Hapvida": 8
-}
-
-Como rodar em desenvolvimento:
-    python divisor_pdfs_faturamento.py
-
-Como gerar executável Windows:
-    pip install pyinstaller
-    pyinstaller --onefile --name DivisorPDFHospitalar divisor_pdfs_faturamento.py
-
-O executável será gerado em:
-    dist/DivisorPDFHospitalar.exe
 """
 
 from __future__ import annotations
