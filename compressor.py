@@ -29,8 +29,7 @@ from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 
 
-# Pasta fixa para uso em máquinas Windows.
-# Ao gerar um .exe, o sistema criará automaticamente essa estrutura no disco C:.
+
 BASE_DIR = Path.home() / "Documents" / "DivisorPDFHospitalar"
 PASTA_ENTRADA = BASE_DIR / "entrada"
 PASTA_PROCESSADOS = BASE_DIR / "processados"
@@ -38,9 +37,7 @@ PASTA_DIVIDIDOS = BASE_DIR / "divididos"
 PASTA_LOGS = BASE_DIR / "logs"
 ARQUIVO_LOG = PASTA_LOGS / "divisor_pdfs.log"
 
-# Regras fixas por convênio.
-# Altere aqui quando precisar adicionar/remover convênios ou mudar limites.
-# O valor representa o limite máximo em MB para cada PDF.
+
 REGRAS_CONVENIOS_MB = {
     "Unimed": 10,
     "Bradesco": 15,
