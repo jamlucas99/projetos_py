@@ -17,6 +17,8 @@ for i in range(6):
 for j in range(6):
     numero = random.randint(1,60)
     numeros_sorteados.append(numero)
+if numeros_jogados > 60 or numeros_jogados =< 0:
+    print("Número inválido! Coloque um número entre 1 e 60.")
 if numeros_jogados == numeros_sorteados:
     print("\nNúmeros jogados: ", numeros_jogados)
     time.sleep(20)
